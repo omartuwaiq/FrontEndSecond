@@ -10,7 +10,7 @@ export class ListEmployees extends Component {
     };
   }
   componentDidMount() {
-    axios.get("api/v1/employees").then((response) => {
+    axios.get("https://backend-omar.herokuapp.com/api/v1/employees").then((response) => {
       console.log(response.data);
       this.setState({ employees: response.data });
     });
